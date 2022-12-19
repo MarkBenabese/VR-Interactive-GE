@@ -10,7 +10,13 @@ public class Spin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Rotate the object around its local y-axis
-        transform.Rotate(0, spinSpeed * Time.deltaTime, 0);
+        if (Input.GetMouseButton(0))
+        {
+            // Do something when the left mouse button is pressed
+            Debug.Log("Left mouse button was pressed!");
+            // Rotate the object around its local y-axis
+            transform.Rotate(0, spinSpeed * Time.deltaTime, 0);
+        }
+       
     }
 }
