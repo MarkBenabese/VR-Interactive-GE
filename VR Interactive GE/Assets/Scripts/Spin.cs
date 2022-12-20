@@ -4,19 +4,12 @@ using UnityEngine;
 
 public class Spin : MonoBehaviour
 {
-    // The speed at which the object will spin
-    public float spinSpeed = 10f;
+    // Speed of rotation, in degrees per second
+    public float rotationSpeed = 90f;
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0))
-        {
-            // Do something when the left mouse button is pressed
-            Debug.Log("Left mouse button was pressed!");
-            // Rotate the object around its local y-axis
-            transform.Rotate(0, spinSpeed * Time.deltaTime, 0);
-        }
-       
+        // Rotate the object around its z-axis
+        transform.Rotate(0f, 0f, rotationSpeed * Time.deltaTime);
     }
 }
